@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  touch: MyString
+  from: MyString
+
+two:
+  touch: MyString
+  from: MyString
