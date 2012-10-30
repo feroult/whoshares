@@ -14,14 +14,21 @@
 ActiveRecord::Schema.define(:version => 20121025145741) do
 
   create_table "touches", :force => true do |t|
-    t.string   "touch"
-    t.string   "from"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.string   "user_screen_name"
+    t.integer  "follower_id"
+    t.string   "follower_screen_name"
+    t.integer  "follower_friends_count"
+    t.integer  "follower_followers_count"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
+  add_index "touches", ["user_id", "follower_id"], :name => "index_touches_on_user_id_and_follower_id", :unique => true
+
   create_table "twitter_users", :force => true do |t|
-    t.string   "profile"
+    t.integer  "user_id"
+    t.string   "screen_name"
     t.string   "oauth_token"
     t.string   "oauth_token_secret"
     t.datetime "created_at",         :null => false

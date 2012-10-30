@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 tweetouch_me:
-  profile: tweetouch_me
+  user_id: 262954659
+  screen_name: tweetouch_me
   oauth_token: 262954659-E9nJznEQuZk0Lik13X5OuQGLd9HEyma56uxro3Jv
   oauth_token_secret: puBzctCRdwEqZUqBfHmPGUj1r8wqXAKHxYwzjASS0

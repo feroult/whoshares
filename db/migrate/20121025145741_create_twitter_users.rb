@@ -1,7 +1,8 @@
 class CreateTwitterUsers < ActiveRecord::Migration
   def change
     create_table :twitter_users do |t|
-      t.string :profile
+      t.integer :user_id, :precision => 15
+      t.string :screen_name
       t.string :oauth_token
       t.string :oauth_token_secret
 
