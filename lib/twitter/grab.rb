@@ -9,11 +9,12 @@ class Grab
   end
 
   def followers_ids(screen_name)    
-    user = client.user(screen_name)
-    touches = []
+    user = client.user(screen_name)    
     
     cursor = -1
     begin            
+      touches = []
+      
       followers = client.follower_ids(screen_name, :cursor => cursor)      
       followers.ids.each do |fid|
         touches << Touch.new(:user_id => user.id,
