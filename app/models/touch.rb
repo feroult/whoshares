@@ -6,4 +6,6 @@ class Touch < ActiveRecord::Base
                   :follower_friends_count, 
                   :follower_followers_count
 
+  validates_inclusion_of :status, :in => [:never, :waiting, :already, :ok, :fail]
+
 end

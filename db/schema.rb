@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025145741) do
+ActiveRecord::Schema.define(:version => 20121031222752) do
 
   create_table "touches", :force => true do |t|
     t.integer  "user_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20121025145741) do
     t.integer  "follower_followers_count"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.string   "status"
   end
 
   add_index "touches", ["user_id", "follower_id"], :name => "index_touches_on_user_id_and_follower_id", :unique => true

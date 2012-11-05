@@ -35,6 +35,9 @@ class Grab
     end     
   end
 
+  # here
+
+
   private
     def update_followers_info(user, touches)
       loop do
@@ -71,5 +74,7 @@ class Grab
       ids = touches.map { |touch| touch.follower_id } 
       client.users(ids)      
     end
+
+
  
 end
